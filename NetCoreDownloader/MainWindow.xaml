@@ -1,0 +1,31 @@
+﻿<Window x:Class="NetCoreDownloader.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NetCoreDownloader"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="350" ResizeMode="NoResize" FontSize="14">
+    <StackPanel>
+        <GroupBox Margin="20 10" Header="Current Installation Status for .Net">
+            <StackPanel Margin="10">
+                <TextBlock Margin="0 0 0 5" x:Name="x64Text" Text="X64 (64-bit)" />
+                <TextBox x:Name="txtX64Status" Padding="3" IsReadOnly="True" Text="Version 6.0.0 installed" />
+                <TextBox x:Name="txtX64Version" Padding="3" IsReadOnly="True" FontWeight="Bold"  Text="You're up to date!" />
+            </StackPanel>
+        </GroupBox>
+
+        <GroupBox Margin="20 10" Header="Latest release from Microsoft:">
+            <TextBlock Margin="10" Text="6.0.0" />
+        </GroupBox>
+
+        <Button x:Name="btnDownload" Margin="10 20" Width="240" Height="35" Content="Download Runtime - X64" />
+
+        <GroupBox x:Name="grpProgress" Margin="20 10" Header="Progress:">
+            <StackPanel Margin="10">
+                <TextBlock Text="Operation canceled by user." />
+                <ProgressBar Height="20"/>
+            </StackPanel>
+        </GroupBox>
+    </StackPanel>
+</Window>
